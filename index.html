@@ -1,0 +1,787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Our Place</title>
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+      body {
+        margin: 10px;
+      }
+      table {
+        /* layering tables to add content 
+		divs can't be used in email dev. */
+        border-spacing: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      td {
+        padding: 0;
+        align-items: center;
+      }
+      img {
+        border: 0;
+      }
+      .wrapper {
+        width: 100%;
+        /*no content can span outside of center tag*/
+        table-layout: fixed;
+        background-color: #fff;
+      }
+      .main {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        font-family: sans-serif;
+        color: #fff;
+        text-align: center; /*Whole main section now has text centered*/
+      }
+      .brandTitle {
+        font-family: "Inconsolata", monospace;
+        padding-top: 0.3em;
+      }
+      .headline {
+        font-family: "Libre Baskerville", serif;
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 0.3em;
+      }
+      .shopNowText {
+        font-size: 27px;
+        font-family: "Italiana", sans-serif;
+        line-height: 1.3;
+      }
+      .shopNowBtn {
+        font-weight: bold;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 15px;
+        padding: 10px 35%;
+      }
+      .two-columns {
+        text-align: center; /*good for responsive - sm screen*/
+      }
+      .two-columns .column {
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+      }
+      .links a {
+        text-decoration: none;
+        color: #f6dbbd;
+        font-size: 12px;
+      }
+      .links {
+        margin-top: 0;
+      }
+      .imgWrapper {
+        width: 280px;
+        height: 350px;
+        overflow: hidden;
+      }
+      .reasonTitle {
+        text-transform: uppercase;
+      }
+      .promisesTitle {
+        margin: 0;
+        font-family: "Libre Baskerville", serif;
+        font-size: 35px;
+      }
+      .reasons p {
+        font-size: 12px;
+        color: #f6dbbd;
+      }
+      .emailBorder {
+        border: 1px solid #f6dbbd;
+        border-radius: 20px;
+        padding: 10px 0;
+      }
+      .footerTitles {
+        font-family: "Libre Baskerville", serif;
+        color: #f6dbbd;
+      }
+      .footerText {
+        font-family: "Cutive Mono", monospace;
+        font-size: 12px;
+        margin-bottom: 0;
+      }
+      .marquee {
+        display: flex;
+        overflow: hidden;
+        gap: 1rem;
+        position: relative;
+        user-select: none;
+      }
+      .marquee-content {
+        flex: none;
+        display: flex;
+        justify-content: space-around;
+        min-width: 100%;
+        gap: 1rem;
+      }
+      @keyframes fwd {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(-100% - 1rem));
+        }
+      }
+      .forward {
+        animation: fwd 12s linear infinite;
+      }
+      .reverse {
+        animation-direction: reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <center class="wrapper">
+      <table class="main" width="100%">
+        <tr style="background-color: #cfdc9e">
+          <td style="padding: 0px 15px; text-align: center">
+            <table width="100%">
+              <tr>
+                <td>
+                  <a
+                    href="https://fromourplace.com/"
+                    style="text-decoration: none; color: #fff"
+                  >
+                    <h1 class="brandTitle">Our Place</h1>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h1 class="headline">The Set That Does It All</h1>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Marquee Practice-->
+        <tr>
+          <td height="3" style="background-color: #c2ca8e">
+            <table width="100%">
+              <tr>
+                <td>
+                  <div class="marquee" style="padding: 15px 0">
+                    <div class="marquee-content forward reverse">
+                      GET 10% OFF YOUR FIRST ORDER OF $145+ WITH CODE:
+                      6JGNFOIU83BJF
+                    </div>
+                    <div class="marquee-content forward reverse">
+                      GET 10% OFF YOUR FIRST ORDER OF $145+ WITH CODE:
+                      6JGNFOIU83BJF
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Cookware Img-->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <img src="images/cookware.jpeg" width="100%" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Shop now banner-->
+        <tr style="background-color: #cfdc9e">
+          <td style="padding: 0px 20px; text-align: center">
+            <table width="100%">
+              <tr>
+                <td style="padding: 0 15px">
+                  <p class="shopNowText">
+                    Streamline prep with a 9-piece ecosystem of multifunctional
+                    mixing bowls and attachments. Say hello to the Better Bowl
+                    Set.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Shop Now Button-->
+        <tr style="background-color: #cfdc9e">
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <a
+                    class="shopNowBtn"
+                    href="https://fromourplace.com/products/better-bowl-set"
+                    target="blank"
+                    style="
+                      color: #fff;
+                      background-color: #daa35b;
+                      text-transform: uppercase;
+                    "
+                    >Shop Now</a
+                  >
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Transition-->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <img
+                    src="images/transitionWave.png"
+                    width="100%"
+                    style="width: 100%; height: 30vh; object-fit: cover"
+                  />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Promises Title-->
+        <tr style="background-color: #f9dfd5; color: #35312d">
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <h1 class="promisesTitle">Your Kitchen. Our Promise</h1>
+                  <h3
+                    style="
+                      text-transform: uppercase;
+                      margin: 0;
+                      font-size: 16px;
+                      padding-top: 5px;
+                    "
+                  >
+                    See Why It's Always Better At Our Place
+                  </h3>
+                  <img
+                    src="images/squiggle.png"
+                    width="300"
+                    style="padding-top: 20px"
+                  />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--First Reason -->
+        <tr style="background-color: #f9dfd5; color: #35312d" class="multitask">
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns" style="padding: 20px 15px 20px 0px">
+                  <table class="column">
+                    <tr>
+                      <td>
+                        <div class="imgWrapper">
+                          <img
+                            src="images/soupPot.jpeg"
+                            alt="Pot With Soup"
+                            title="Pot With Soup"
+                            width="300"
+                            height="300"
+                            style="
+                              border-radius: 50%;
+                              border: 1px solid#35312d;
+                              position: relative;
+                              left: -60px;
+                              object-fit: cover;
+                            "
+                          />
+                        </div>
+                      </td>
+                      <td style="padding-right: 10px">
+                        <table class="column">
+                          <h1 class="reasonTitle">Made To Multitask</h1>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur officiis consequatur expedita laborum
+                            excepturi eligendi, culpa necessitatibus mollitia
+                            cum voluptates, quod illum fugiat labore assumenda
+                            dolorum, ipsa sit eveniet accusamus!
+                          </p>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Second Reason-->
+        <tr style="background-color: #f9dfd5; color: #35312d" class="multitask">
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns" style="padding: 20px 0px 20px 15px">
+                  <table class="column">
+                    <tr>
+                      <td style="padding-left: 10px">
+                        <table class="column">
+                          <h1 class="reasonTitle">No Harsh Chemicals</h1>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur officiis consequatur expedita laborum
+                            excepturi eligendi, culpa necessitatibus mollitia
+                            cum voluptates, quod illum fugiat labore assumenda
+                            dolorum, ipsa sit eveniet accusamus!
+                          </p>
+                        </table>
+                      </td>
+                      <td>
+                        <div class="imgWrapper">
+                          <img
+                            src="images/pan.jpeg"
+                            alt="Pan With Bell Peppers"
+                            title="Pan With Bell Peppers"
+                            width="300"
+                            height="300"
+                            style="
+                              border-radius: 50%;
+                              border: 1px solid#35312d;
+                              position: relative;
+                              left: 30px;
+                              object-fit: cover;
+                            "
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Third Reason-->
+        <tr style="background-color: #f9dfd5; color: #35312d" class="multitask">
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns" style="padding: 20px 15px 20px 0px">
+                  <table class="column">
+                    <tr>
+                      <td>
+                        <div class="imgWrapper">
+                          <img
+                            src="images/orangePot.jpeg"
+                            alt="Orange Dutch Oven"
+                            title="Orange Dutch Oven"
+                            width="300"
+                            height="300"
+                            style="
+                              border-radius: 50%;
+                              border: 1px solid#35312d;
+                              position: relative;
+                              left: -60px;
+                            "
+                          />
+                        </div>
+                      </td>
+                      <td style="padding-right: 10px">
+                        <table class="column">
+                          <h1 class="reasonTitle">Sustainably Sourced</h1>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur officiis consequatur expedita laborum
+                            excepturi eligendi, culpa necessitatibus mollitia
+                            cum voluptates, quod illum fugiat labore assumenda
+                            dolorum, ipsa sit eveniet accusamus!
+                          </p>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Fourth Reason-->
+        <tr style="background-color: #f9dfd5; color: #35312d" class="multitask">
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns" style="padding: 20px 0px 20px 15px">
+                  <table class="column">
+                    <tr>
+                      <td style="padding-right: 10px">
+                        <table class="column">
+                          <h1 class="reasonTitle">An Ode To Lost Traditions</h1>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur officiis consequatur expedita laborum
+                            excepturi eligendi, culpa necessitatibus mollitia
+                            cum voluptates, quod illum fugiat labore assumenda
+                            dolorum, ipsa sit eveniet accusamus!
+                          </p>
+                        </table>
+                      </td>
+                      <td>
+                        <div class="imgWrapper">
+                          <img
+                            src="images/tajine.jpeg"
+                            alt="Tajine - traditional Moroccan cookware"
+                            title="Tajine - traditional Moroccan cookware"
+                            width="300"
+                            height="300"
+                            style="
+                              border-radius: 50%;
+                              border: 1px solid#35312d;
+                              position: relative;
+                              left: 30px;
+                              object-fit: cover;
+                            "
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Fifth Reason-->
+        <tr style="background-color: #f9dfd5; color: #35312d" class="multitask">
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns" style="padding: 20px 15px 20px 0px">
+                  <table class="column">
+                    <tr>
+                      <td>
+                        <div class="imgWrapper">
+                          <img
+                            src="images/stovetop.jpeg"
+                            alt="Small Pot on stove"
+                            title="Small Pot on stove"
+                            width="300"
+                            height="300"
+                            style="
+                              border-radius: 50%;
+                              border: 1px solid#35312d;
+                              position: relative;
+                              left: -60px;
+                              object-fit: cover;
+                            "
+                          />
+                        </div>
+                      </td>
+                      <td style="padding-right: 10px">
+                        <table class="column">
+                          <h1 class="reasonTitle">Highly Compatible</h1>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur officiis consequatur expedita laborum
+                            excepturi eligendi, culpa necessitatibus mollitia
+                            cum voluptates, quod illum fugiat labore assumenda
+                            dolorum, ipsa sit eveniet accusamus!
+                          </p>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Sixth Reason-->
+        <tr style="background-color: #f9dfd5; color: #35312d" class="multitask">
+          <td>
+            <table width="100%">
+              <tr>
+                <td class="two-columns" style="padding: 20px 0px 0px 15px">
+                  <table class="column">
+                    <tr>
+                      <td style="padding-right: 10px">
+                        <table class="column">
+                          <h1 class="reasonTitle">Pieces With Personality</h1>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur officiis consequatur expedita laborum
+                            excepturi eligendi, culpa necessitatibus mollitia
+                            cum voluptates, quod illum fugiat labore assumenda
+                            dolorum, ipsa sit eveniet accusamus!
+                          </p>
+                        </table>
+                      </td>
+                      <td>
+                        <div class="imgWrapper">
+                          <img
+                            src="images/potSet.jpeg"
+                            alt="A collection of pots"
+                            title="A collection of pots"
+                            width="300"
+                            height="300"
+                            style="
+                              border-radius: 50%;
+                              border: 1px solid#35312d;
+                              position: relative;
+                              left: 30px;
+                              object-fit: cover;
+                            "
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Transition-->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <img
+                    src="images/upsideDownWave.png"
+                    width="100%"
+                    style="width: 100%; height: 20vh; object-fit: cover"
+                  />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Shopping Perks-->
+        <tr style="background-color: #cfdc9e">
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <p>Free shipping on orders $50 or more</p>
+                  <p>100-day free returns & exchanges</p>
+                  <p>Unlock rewards through our loyalty program</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Shop Now Button-->
+        <tr style="background-color: #cfdc9e">
+          <td>
+            <table width="100%">
+              <tr>
+                <td style="padding-bottom: 2em">
+                  <a
+                    class="shopNowBtn"
+                    href="https://fromourplace.com/collections/cookware"
+                    target="blank"
+                    style="color: #fff; background-color: #daa35b"
+                    >Shop Now</a
+                  >
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Reasons to Love Our Place (title)-->
+        <tr style="background-color: #35312d">
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <h1 class="footerTitles">Reasons to Love Our Place</h1>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--List Of Reasons -->
+        <tr style="background-color: #35312d" class="reasons">
+          <td style="padding: 0 15px">
+            <table width="100%">
+              <tr>
+                <td>
+                  <a>
+                    <img src="images/truck.png" width="50" />
+                  </a>
+                  <p>
+                    Free Shipping on <br />
+                    $50+ orders<sup>*</sup>
+                  </p>
+                </td>
+                <td>
+                  <a>
+                    <img src="images/klarna.png" width="50" />
+                  </a>
+                  <p>
+                    Buy Now <br />
+                    Pay Later
+                  </p>
+                </td>
+                <td>
+                  <a>
+                    <img src="images/return.png" width="50" />
+                  </a>
+                  <p>
+                    100-day free returns <br />
+                    & exchanges
+                  </p>
+                </td>
+                <td>
+                  <a>
+                    <img src="images/chat.png" width="50" />
+                  </a>
+                  <p>
+                    Here to help! Reach <br />
+                    out to CX
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a>
+                    <img src="images/earth.png" width="50" />
+                  </a>
+                  <p>Our Mission</p>
+                </td>
+                <td>
+                  <a>
+                    <img src="images/dollar.png" width="50" />
+                  </a>
+                  <p>
+                    Refer A Friend: <br />
+                    Give $20, get $20
+                  </p>
+                </td>
+                <td>
+                  <a>
+                    <img src="images/home.png" width="50" />
+                  </a>
+                  <p>Visit Us <br />in-stores</p>
+                </td>
+                <td>
+                  <a>
+                    <img src="images/phone.png" width="50" />
+                  </a>
+                  <p>
+                    Sign up for text <br />
+                    exclusives!
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Border-->
+        <tr>
+          <td height="1" style="background-color: #fff"></td>
+        </tr>
+        <!--Contact Info-->
+        <tr style="background-color: #35312d; color: #f6dbbd">
+          <td style="padding-top: 0.5em">
+            <table width="100%">
+              <tr>
+                <td>
+                  <h1 class="footerTitles">You're Always Welcome</h1>
+                  <p style="margin: 0">Questions? We're here for you.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Email Button-->
+        <tr style="background-color: #35312d; color: #f6dbbd">
+          <td style="padding-bottom: 0.7em">
+            <table width="100%">
+              <tr>
+                <td style="padding: 0 10%">
+                  <p class="emailBorder">
+                    Drop us a line at
+                    <span>
+                      <a
+                        href="mailto:hello@fromourplace.com"
+                        target="blank"
+                        style="
+                          color: #f6dbbd;
+                          background-color: transparent;
+                          border-color: #fff;
+                        "
+                        >hello@fromourplace.com</a
+                      ></span
+                    >
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!--Border-->
+        <tr>
+          <td height="1" style="background-color: #fff"></td>
+        </tr>
+        <!--Footer-->
+        <tr style="background-color: #35312d; color: #f6dbbd">
+          <td>
+            <table width="100%">
+              <tr>
+                <td>
+                  <p class="footerText">
+                    This email was sent from
+                    <br />
+                    Our Place US, 3924 Tuller Avenue Culver City, CA 90230
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="links footerText">
+                    <a href="https://fromourplace.com/">View In Browser | </a>
+                    <a href="https://fromourplace.com/pages/terms"
+                      >Terms Of Use |</a
+                    >
+                    <a href="https://fromourplace.com/pages/privacy"
+                      >Privacy Policy |</a
+                    >
+                    <a
+                      href="https://manage.kmail-lists.com/subscriptions/unsubscribe"
+                      >Unsubscribe</a
+                    >
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 1em">
+                  <p class="footerText">Icons By Icons8</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
