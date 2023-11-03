@@ -12,4 +12,4 @@ responsiveness with every section created because usually, I would work on it at
 * Stacking tables instead of using divs to create new sections
 
 # Demo
-🕹 [Our Place Email Template]()
+🕹 [Our Place Email Template](https://bubblegumloco.github.io/ourPlace/)
